@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>API - CSV - No Framework</title>
+  </head>
+  <body>
+    <h2>Class List</h2>
+    <div id="classTable"></div>
+
+    <div class="overlay" id="overlayClass"></div>
+    <div class="modal" id="modalClass">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Modify Class</h2>
+        <form id="modifyClassForm">
+          Name: <input type="text" id="modifyClassName" required /><br />
+          Level: <input type="text" id="modifyClassLevel" /><br />
+          <input type="submit" value="Save Changes" />
+        </form>
+      </div>
+    </div>
+
+    <h2>Student List</h2>
+    <div id="studentTable"></div>
+
+    <div class="modal" id="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Modify Student</h2>
+        <form id="modifyStudentForm">
+          Last Name: <input type="text" id="modifyLastName" required /><br />
+          First Name: <input type="text" id="modifyFirstName" required /><br />
+          Email: <input type="email" id="modifyEmail" required /><br />
+          Phone: <input type="tel" id="modifyPhone" required /><br />
+          Address: <input type="text" id="modifyAddress" required /><br />
+          ZIP: <input type="text" id="modifyZip" required /><br />
+          City: <input type="text" id="modifyCity" required /><br />
+          Class: <input type="text" id="modifyStudentClass" /><br />
+          <input type="submit" value="Save Changes" />
+        </form>
+      </div>
+    </div>
+
+    <div class="form">
+      <div class="class">
+        <h2>Create Class</h2>
+        <form id="classForm">
+          Name: <input type="text" id="className" required /><br />
+          Level: <input type="text" id="classLevel" /><br />
+          <input type="submit" value="Create Class" />
+        </form>
+      </div>
+      <div class="student">
+        <h2>Create Student</h2>
+        <form id="studentForm">
+          Last Name: <input type="text" id="lastName" required /><br />
+          First Name: <input type="text" id="firstName" required /><br />
+          Email: <input type="email" id="email" required /><br />
+          Phone: <input type="tel" id="phone" required /><br />
+          Address: <input type="text" id="address" required /><br />
+          ZIP: <input type="text" id="zip" required /><br />
+          City: <input type="text" id="city" required /><br />
+          Class: <input type="text" id="studentClass" /><br />
+          <input type="submit" value="Create Student" />
+        </form>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script
+      src="https://kit.fontawesome.com/793f43be4e.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

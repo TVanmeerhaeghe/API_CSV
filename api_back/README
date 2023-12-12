@@ -1,0 +1,20 @@
+-|Exercice API REST avec fichier CSV|-
+
+Initialiser le projet :
+npm i
+
+Lancer le projet :
+npm start server.js
+
+URL d'API :
+http://localhost:3000
+
+  <!--
+    ▄▄▄▄▄ ████▄ ▀▄    ▄ ▄███▄     ▄       ▄        ▄   ████▄ ▄███▄   █
+  ▄▀  █   █   █   █  █  █▀   ▀     █  ▀▄   █        █  █   █ █▀   ▀  █
+      █   █   █    ▀█   ██▄▄    █   █   █ ▀     ██   █ █   █ ██▄▄    █
+  ▄ █    ▀████    █    █▄   ▄▀ █   █  ▄ █      █ █  █ ▀████ █▄   ▄▀ ███▄
+    ▀            ▄▀     ▀███▀   █▄ ▄█ █   ▀▄    █  █ █       ▀███▀       ▀ 
+                                ▀▀▀   ▀        █   ██
+
+  -->
