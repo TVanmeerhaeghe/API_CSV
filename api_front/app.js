@@ -293,7 +293,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (response.ok) {
         console.log(`Class with ID ${classId} modified successfully`);
-        // Rafraîchir la liste des classes après modification
         fetchClasses();
         closeModal();
       } else {
@@ -338,7 +337,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (response.ok) {
         console.log(`Student with ID ${studentId} modified successfully`);
-        // Rafraîchir la liste des étudiants après modification
         fetchStudents();
         closeModal();
       } else {
