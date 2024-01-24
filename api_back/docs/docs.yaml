@@ -1,0 +1,209 @@
+openapi: 3.0.3
+info:
+  title: MDS_API
+  version: 1.0.0
+  contact: {}
+servers:
+  - url: http://localhost
+paths:
+  /class:
+    get:
+      summary: All classes
+      description: All classes
+      operationId: allClasses
+      responses:
+        "200":
+          description: ""
+  /class/:id:
+    get:
+      summary: One class
+      description: One class
+      operationId: oneClass
+      responses:
+        "200":
+          description: ""
+  /students:
+    get:
+      summary: All students
+      description: All students
+      operationId: allStudents
+      responses:
+        "200":
+          description: ""
+  /student/:id:
+    get:
+      summary: One student
+      description: One student
+      operationId: oneStudent
+      responses:
+        "200":
+          description: ""
+  /class/add:
+    post:
+      summary: Add class
+      description: Add class
+      operationId: addClass
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                level:
+                  type: string
+                  example: M2
+                name:
+                  type: string
+                  example: Cook
+            examples:
+              Add class:
+                value:
+                  level: M2
+                  name: Cook
+      responses:
+        "200":
+          description: ""
+  /student/add:
+    post:
+      summary: Add student
+      description: Add student
+      operationId: addStudent
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                address:
+                  type: string
+                  example: 123 Main Street
+                city:
+                  type: string
+                  example: Exampleville
+                class:
+                  type: number
+                  example: 5
+                email:
+                  type: string
+                  example: john.doe@example.com
+                firstname:
+                  type: string
+                  example: John
+                lastname:
+                  type: string
+                  example: Doe
+                phone:
+                  type: string
+                  example: 123-456-7890
+                zip:
+                  type: string
+                  example: "12345"
+            examples:
+              Add student:
+                value:
+                  address: 123 Main Street
+                  city: Exampleville
+                  class: 5
+                  email: john.doe@example.com
+                  firstname: John
+                  lastname: Doe
+                  phone: 123-456-7890
+                  zip: "12345"
+      responses:
+        "200":
+          description: ""
+  /class/modify/:id:
+    patch:
+      summary: Modify class
+      description: Modify class
+      operationId: modifyClass
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                level:
+                  type: string
+                  example: M2
+                name:
+                  type: string
+                  example: Cook
+            examples:
+              Modify class:
+                value:
+                  level: M2
+                  name: Cook
+      responses:
+        "200":
+          description: ""
+  /student/modify/:id:
+    patch:
+      summary: Modify Student
+      description: Modify Student
+      operationId: modifyStudent
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                address:
+                  type: string
+                  example: 82 rue Porte d'Orange
+                city:
+                  type: string
+                  example: CASTRES
+                class:
+                  type: number
+                  example: 1
+                email:
+                  type: string
+                  example: ThierryMichaud@jourrapide.com
+                firstname:
+                  type: string
+                  example: Thierry
+                id:
+                  type: number
+                  example: 1
+                lastname:
+                  type: string
+                  example: Michoucroute
+                phone:
+                  type: string
+                  example: 05.95.70.45.85
+                zip:
+                  type: number
+                  example: 81100
+            examples:
+              Modify Student:
+                value:
+                  address: 82 rue Porte d'Orange
+                  city: CASTRES
+                  class: 1
+                  email: ThierryMichaud@jourrapide.com
+                  firstname: Thierry
+                  id: 1
+                  lastname: Michoucroute
+                  phone: 05.95.70.45.85
+                  zip: 81100
+      responses:
+        "200":
+          description: ""
+  /class/delete/:id:
+    delete:
+      summary: Delete One Class
+      description: Delete One Class
+      operationId: deleteOneClass
+      responses:
+        "200":
+          description: ""
+  /student/delete/:id:
+    delete:
+      summary: Delete One Student
+      description: Delete One Student
+      operationId: deleteOneStudent
+      responses:
+        "200":
+          description: ""
+tags: []
