@@ -1,8 +1,8 @@
 version: "1.0"
 
 services:
-  api:
-    build: ./api
+  api_back:
+    build: ./api_back
     ports:
       - "3000:80"
     depends_on:
@@ -13,8 +13,8 @@ services:
       - MYSQL_PASSWORD=
       - MYSQL_DATABASE=docker_api
 
-  frontend:
-    build: ./frontend
+  api_front:
+    build: ./api_front
     ports:
       - "80:80"
 
