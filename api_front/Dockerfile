@@ -4,4 +4,4 @@ WORKDIR /app
 
 COPY . ./
 
-EXPOSE 81
+EXPOSE 80
