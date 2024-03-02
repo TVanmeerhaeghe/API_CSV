@@ -8,10 +8,15 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-      - name: Install dependencies
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install dependencies for API back
+        working-directory: ./back/api_back
         run: npm install
-      - name: Deploy to production
+
+      - name: Build and test API back
+        working-directory: ./back/api_back
         run: npm start
