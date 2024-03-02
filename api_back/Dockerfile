@@ -1,11 +1,11 @@
-FROM node
+FROM node:20
 
 WORKDIR /app
 
-COPY server.js package.json ./
+COPY . .
 
-RUN npm i
+RUN npm install
 
 EXPOSE 80
 
-CMD [ "npm", "start", "server.js" ]
+CMD [ "npm", "start"]

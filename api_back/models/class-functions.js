@@ -1,9 +1,9 @@
 const mysql = require("mysql");
 
 const dbConfig = {
-  host: "localhost",
-  user: "root",
-  password: "",
+  host: "db",
+  user: "user",
+  password: "password",
   database: "docker_api",
 };
 

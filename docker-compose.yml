@@ -9,8 +9,8 @@ services:
       - db
     environment:
       - MYSQL_HOST=db
-      - MYSQL_USER=root
-      - MYSQL_PASSWORD=
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=password
       - MYSQL_DATABASE=docker_api
 
   api_front:
@@ -21,12 +21,12 @@ services:
   db:
     image: mysql:latest
     environment:
-      MYSQL_ROOT_PASSWORD:
+      MYSQL_ROOT_PASSWORD: root_password
       MYSQL_DATABASE: docker_api
-      MYSQL_USER: root
-      MYSQL_PASSWORD:
+      MYSQL_USER: user
+      MYSQL_PASSWORD: password
     ports:
-      - "3306:3306"
+      - "3309:3306"
     volumes:
       - mysql_data:/var/lib/mysql
 
