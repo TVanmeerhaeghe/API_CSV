@@ -6,17 +6,51 @@ on:
       - main
 
 jobs:
-  build:
+  validation:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Install dependencies for API back
-        working-directory: ./api_back
+      - name: Install dependencies
         run: npm install
 
-      - name: Build and test API back
-        working-directory: ./api_back
-        run: npm start
+      - name: Lint code
+        run: npm run lint
+
+  tests:
+    runs-on: ubuntu-latest
+    needs: validation
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Run your tests here
+      # Example:
+      # - name: Run unit tests
+      #   run: npm test
+
+  build:
+    runs-on: ubuntu-latest
+    needs: tests
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build Docker image for API back
+        run: docker build -t myregistry/api_back:$GITHUB_SHA ./api_back
+
+      - name: Build Docker image for API front
+        run: docker build -t myregistry/api_back:$GITHUB_SHA ./api_front
+
+      - name: Build Docker image for API db
+        run: docker build -t myregistry/api_back:$GITHUB_SHA ./db
+
+  deployment:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Docker swarm
