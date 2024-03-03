@@ -25,10 +25,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # Run your tests here
-      # Example:
-      # - name: Run unit tests
-      #   run: npm test
+      # Test
 
   build:
     runs-on: ubuntu-latest
