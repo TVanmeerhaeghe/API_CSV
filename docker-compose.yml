@@ -23,7 +23,7 @@ services:
       - api_csv
 
   db:
-    image: mysql:latest
+    build: ./db
     environment:
       MYSQL_ROOT_PASSWORD: root_password
       MYSQL_DATABASE: docker_api
