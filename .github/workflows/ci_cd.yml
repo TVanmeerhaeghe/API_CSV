@@ -51,3 +51,21 @@ jobs:
         uses: actions/checkout@v4
 
       # Docker swarm
+# name: CI/CD Pipeline
+
+# on:
+#   push:
+#     branches:
+#       - main
+
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout code
+#         uses: actions/checkout@v4
+#       - name: Install dependencies
+#         run: npm install
+#       - name: Start app
+#         run: npm start
+
